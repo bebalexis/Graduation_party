@@ -154,8 +154,10 @@ def download_sample():
 # RUN APP
 # --------------------------------------------
 if __name__ == '__main__':
-    app.run(
-        host='0.0.0.0',
-        port=int(os.environ.get('PORT', 10000)),
-        debug=True
-    )
+ #   app.run(
+  #      host='0.0.0.0',
+ #      port=int(os.environ.get('PORT', 10000)),
+     #    debug=True
+   # )
+ port = int(os.environ.get("PORT", 5000))  # Use 5000 as default locally
+ app.run(host="0.0.0.0", port=port)
