@@ -9,4 +9,5 @@ COPY . .
 RUN mkdir -p static/qr_codes
 EXPOSE 10000
 # Render sets $PORT; gunicorn will use it
-CMD ["gunicorn","--bind","0.0.0.0:$PORT","app:app","--workers","2"]
+#CMD ["gunicorn","--bind","0.0.0.0:$PORT","app:app","--workers","2"]
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:$PORT app:app --workers 2"]
