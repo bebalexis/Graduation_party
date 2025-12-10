@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>Paste 60 guest names (one per line) or upload a CSV file with 60 lines. The app will assign 10 tables × 6 guests.</p>
+<form method="post" enctype="multipart/form-data">
+<div class="mb-3">
+<label for="names" class="form-label">Paste names (one per line)</label>
+<textarea id="names" name="names" class="form-control" rows="10"></textarea>
+</div>
+<div class="mb-3">
+<label for="file" class="form-label">Or upload CSV</label>
+<input type="file" id="file" name="file" class="form-control" accept=".csv,text/csv">
+</div>
+<button class="btn btn-primary" type="submit">Assign & Generate QR Codes</button>
+<a class="btn btn-secondary" href="{{ url_for('download_sample') }}">Download sample CSV</a>
+</form>
+{% endblock %}

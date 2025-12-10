@@ -1,0 +1,9 @@
+services:
+- type: web
+name: flask-guest-checkin
+env: docker
+instanceType: starter
+plan: starter
+envVars:
+- key: PORT
+value: "10000"

@@ -1,0 +1,5 @@
+Flask>=2.2
+qrcode>=7.3
+pillow>=10.0
+gunicorn>=20.1
+python-dotenv>=1.0

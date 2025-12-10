@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Table {{ table_number }}</h2>
+{% if guests %}
+<ul>
+{% for g in guests %}
+<li>{{ g }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No assignment found for this table. If you just created the assignment please ensure the server wrote the assignment CSV.</p>
+{% endif %}
+<p>QR code for this table:</p>
+<img src="{{ qr_path }}" alt="QR code for table {{ table_number }}" style="max-width:260px;">
+{% endblock %}
